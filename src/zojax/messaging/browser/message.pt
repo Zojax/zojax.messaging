@@ -1,0 +1,1 @@
+<h1 i18n:translate="">Message: <tal:block i18n:name="title" content="context/title"/></h1>

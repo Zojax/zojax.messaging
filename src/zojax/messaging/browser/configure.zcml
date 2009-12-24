@@ -1,0 +1,70 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:zcml="http://namespaces.zope.org/zcml"
+   xmlns:zojax="http://namespaces.zope.org/zojax"
+   xmlns:browser="http://namespaces.zope.org/browser"
+   i18n_domain="zojax">
+
+  <!-- Message storage -->
+  <browser:defaultView
+     name="index.html"
+     for="..interfaces.IMessageStorage" />
+
+  <zojax:pagelet
+     name="index.html"
+     for="..interfaces.IMessageStorage"
+     template="storage.pt"
+     class=".storage.StorageView"
+     permission="zope.Public" />
+
+  <!-- service view -->
+  <zojax:pagelet
+     type="messaging.service.view"
+     for="..interfaces.IMessageService"
+     template="service.pt"
+     pemrission="zope.Public" />
+
+  <!-- message stroage publisher -->
+  <adapter
+     for="..interfaces.IMessageStorage *"
+     factory="z3c.traverser.traverser.PluggableTraverser"
+     provides="zope.publisher.interfaces.IPublishTraverse" />
+
+  <subscriber
+     for="..interfaces.IMessageStorage *"
+     provides="z3c.traverser.interfaces.ITraverserPlugin"
+     factory=".publisher.TraverserPlugin" />
+
+  <!-- Message -->
+  <browser:page
+     name="index.html"
+     for="..interfaces.IMessage"
+     template="message.pt"
+     class=".message.MessageView"
+     permission="zope.Public" />
+
+  <browser:icon
+     name="zmi_icon"
+     file="message.png"
+     for="..interfaces.IMessage" />
+
+  <!-- email notification message -->
+  <zojax:mailtemplate
+     name="template-created"
+     for="..interfaces.IMessage"
+     subject="You have been received new message."
+     template="template.pt"
+     contentType="text/html"
+     class=".template.MessageTemplate" />
+
+  <subscriber handler=".template.messageCreated" />
+
+  <zojax:pagelet
+     type="messaging.mail.view"
+     template="messagemail.pt"
+     for="..interfaces.IMessage" />
+
+  <!-- breadcrumbs -->
+  <adapter factory=".breadcrumb.MessagesBreadcrumb" />
+
+</configure>

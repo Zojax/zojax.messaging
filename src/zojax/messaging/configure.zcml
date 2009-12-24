@@ -1,0 +1,31 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:zojax="http://namespaces.zope.org/zojax"
+   i18n_domain="zojax.messaging">
+
+  <!-- Message storage -->
+  <class class=".storage.MessageStorage">
+    <allow interface=".interfaces.IMessageStorage" />
+  </class>
+
+  <!-- personal preferences -->
+  <zojax:preferenceGroup
+     id="messaging"
+     title="Portal messaging"
+     description="These are all the preferences related to portal messaging."
+     schema=".interfaces.IPortalMessagingPreference"
+     tests="zojax.preferences.utils.isUser" />
+
+  <!-- pagelet type -->
+  <zojax:pageletType
+     name="messaging.service.view"
+     interface=".interfaces.IServiceView" />
+
+  <zojax:pageletType
+     name="messaging.mail.view"
+     interface=".interfaces.IMessageMailView" />
+
+  <!-- browser views -->
+  <include package=".browser" />
+
+</configure>

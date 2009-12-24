@@ -1,0 +1,23 @@
+<tal:block i18n:domain="zojax.messaging" tal:define="services view/getServices">
+  <h1 i18n:translate="">My messages</h1>
+  <br />
+
+  <tal:block condition="not:services" i18n:translate="">
+    You have no messages.
+  </tal:block>
+
+  <form method="post" tal:attributes="href request/URL" tal:condition="services">
+    <tal:block repeat="service services">
+      <tal:block
+	 condition="service"
+	 content="structure service/@@pagelet/messaging.service.view" />
+    </tal:block>
+      
+    <div class="z-form-controls">
+      <hr />
+      <input type="submit" name="form.remove"
+	     class="z-form-removebutton" value="Remove messages" 
+	     i18n:attributes="value" />
+    </div>
+  </form>
+</tal:block>
