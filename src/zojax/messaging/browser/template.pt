@@ -1,0 +1,10 @@
+<tal:block content="structure view/context/@@pagelet/messaging.mail.view" />
+
+<br />
+<hr />
+Date: <tal:block content="structure view/date" /><br />
+<tal:block condition="view/service">Service: <tal:block content="view/service/title"/></tal:block>
+
+<br /><br />
+<hr />
+<a tal:attributes="href view/url"><tal:block content="view/url" /></a>

@@ -1,0 +1,33 @@
+<h2 tal:content="context/title"></h2>
+<div tal:content="context/description"></div>
+
+<div class="z-table-container">
+
+<table class="z-table">
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th i18n:translate="">Id</th>
+      <th i18n:translate="">Title</th>
+      <th i18n:translate="">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr tal:repeat="msgId context">
+      <tal:block define="msg python:context.get(msgId);
+			 name msg/__name__">
+	<td><input type="checkbox" name="msgid:list"
+		   tal:attributes="value name" /></td>
+	<td tal:content="name"></td>
+	<td>
+	  <strong tal:omit-tag="not:msg/__status__">
+	    <a tal:attributes="href string:$name/" tal:content="msg/title"></a>
+	  </strong>
+	</td>
+	<td tal:content="structure formatter:fancyDatetime:msg/__date__"></td>
+      </tal:block>
+    </tr>
+  </tbody>
+</table>
+
+</div>
