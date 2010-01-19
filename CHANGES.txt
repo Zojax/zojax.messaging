@@ -1,64 +1,8 @@
-=======
-CHANGES
-=======
-
-1.0.4 (2009-06-23)
+1.0.2 (Unreleased)
 ------------------
 
-- Fixed preference field description
 
-- Copyright changed to 'Zope Foundation and Contributors'
-
-
-1.0.3 (2009-05-05)
+1.0.1 (2010-01-19)
 ------------------
 
-- Change empty messages text
-
-
-1.0.2 (2009-03-27)
-------------------
-
-- Added 'messaging.mail.view' pagelet type for custom mail message view
-
-
-1.0.1 (2009-03-25)
-------------------
-
-- Fixed mail notification
-
-- Added 'messaging.service.view' pagelet type
-
-
-1.0.0 (2009-03-14)
-------------------
-
-- Move storage implementation to zojax.personal.messages
-
-
-0.99.0 (2008-06-26)
--------------------
-
-- API refactoring
-
-- Added preferences schema
-
-- Tests
-
-
-0.2.2 (2008-04-15)
-------------------
-
-- Use zojax.mailtemplate package
-
-
-0.2 (2008-03-06)
-----------------
-
-- Added mail notifications
-
-
-0.1 (2008-03-03)
-----------------
-
-- Initial release
+- zojax initial release
