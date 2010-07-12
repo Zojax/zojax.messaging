@@ -26,7 +26,7 @@ from BTrees.OOBTree import OOBTree
 from BTrees.IIBTree import IITreeSet
 
 from zope import event, interface
-
+from zope.interface.common.idatetime import ITZInfo
 from zope.location import Location
 from zope.component import getUtility
 from zope.cachedescriptors.property import Lazy
@@ -97,7 +97,7 @@ class MessageStorage(Persistent, Location):
         service = self.getService(serviceId)
 
         msg = service.create(**data)
-        date = datetime.now(pytz.utc)
+        date = datetime.now(ITZInfo(self.principal, pytz.utc))
 
         while date in self.index:
             date = date + timedelta
