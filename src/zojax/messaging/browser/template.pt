@@ -2,8 +2,15 @@
 
 <br />
 <hr />
-Date: <tal:block content="structure view/date" /><br />
-<tal:block condition="view/service">Service: <tal:block content="view/service/title"/></tal:block>
+<tal:block i18n:translate="">
+Date:
+</tal:block>
+<tal:block content="structure view/date" /><br />
+<tal:block condition="view/service">
+<tal:block i18n:translate="">
+Service: 
+</tal:block>
+<tal:block content="view/service/title"/></tal:block>
 
 <br /><br />
 <hr />
