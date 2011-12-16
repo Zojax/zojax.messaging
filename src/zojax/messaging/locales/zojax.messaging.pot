@@ -1,0 +1,103 @@
+##############################################################################
+#
+# Copyright (c) 2003-2004 Zope Corporation and Contributors.
+# All Rights Reserved.
+#
+# This software is subject to the provisions of the Zope Public License,
+# Version 2.1 (ZPL).  A copy of the ZPL should accompany this distribution.
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY AND ALL EXPRESS OR IMPLIED
+# WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+# WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
+# FOR A PARTICULAR PURPOSE.
+#
+##############################################################################
+msgid ""
+msgstr ""
+"Project-Id-Version: Development/Unknown\n"
+"POT-Creation-Date: Thu Dec  8 23:04:26 2011\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Zope 3 Developers <zope3-dev@zope.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: zope/app/locales/extract.py\n"
+
+#: src/zojax/messaging/browser/breadcrumb.py:26
+#: src/zojax/messaging/browser/storage.pt:2
+msgid "My messages"
+msgstr ""
+
+#: src/zojax/messaging/browser/message.pt:1
+msgid "Message: ${title}"
+msgstr ""
+
+#: src/zojax/messaging/browser/message.py:34
+msgid "Message has been removed."
+msgstr ""
+
+#: src/zojax/messaging/browser/messagemail.pt:1
+msgid "You have been received new message."
+msgstr ""
+
+#: src/zojax/messaging/browser/personalbar.py:38
+msgid "Messages"
+msgstr ""
+
+#: src/zojax/messaging/browser/service.pt:10
+msgid "Id"
+msgstr ""
+
+#: src/zojax/messaging/browser/service.pt:12
+msgid "Date"
+msgstr ""
+
+#: src/zojax/messaging/browser/storage.pt:18
+msgid "Remove messages"
+msgstr ""
+
+#: src/zojax/messaging/browser/storage.pt:5
+msgid "You have no messages."
+msgstr ""
+
+#: src/zojax/messaging/browser/storage.py:47
+msgid "Please select messages."
+msgstr ""
+
+#: src/zojax/messaging/browser/storage.py:58
+msgid "Selected messages have been removed."
+msgstr ""
+
+#: src/zojax/messaging/browser/template.pt:10
+msgid "Service:"
+msgstr ""
+
+#: src/zojax/messaging/browser/template.pt:5
+msgid "Date:"
+msgstr ""
+
+#: src/zojax/messaging/configure.zcml:12
+msgid "These are all the preferences related to portal messaging."
+msgstr ""
+
+#: src/zojax/messaging/configure.zcml:12
+msgid "Portal messaging"
+msgstr ""
+
+#: src/zojax/messaging/interfaces.py:129
+msgid "Notification"
+msgstr ""
+
+#: src/zojax/messaging/interfaces.py:130
+msgid "Send me an email notification if message is received."
+msgstr ""
+
+#: src/zojax/messaging/interfaces.py:29
+#: src/zojax/messaging/browser/service.pt:11
+msgid "Title"
+msgstr ""
+
+#: src/zojax/messaging/interfaces.py:30
+msgid "Message title."
+msgstr ""
+
